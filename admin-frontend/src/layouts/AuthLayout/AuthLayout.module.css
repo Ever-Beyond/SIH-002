@@ -1,0 +1,67 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-bg-base);
+}
+
+.leftPane {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .leftPane {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    background-color: var(--color-primary-dark);
+    background-image: url('https://images.unsplash.com/photo-1519003722824-194d4455aeb0?auto=format&fit=crop&q=80&w=1200');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: var(--spacing-8);
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(15, 23, 42, 0.9));
+  z-index: 1;
+}
+
+.brand {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brandName {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-top: var(--spacing-4);
+  margin-bottom: var(--spacing-2);
+}
+
+.brandTagline {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  max-width: 80%;
+}
+
+.rightPane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-6);
+  position: relative;
+}

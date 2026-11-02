@@ -1,0 +1,106 @@
+.sidebar {
+  width: 260px;
+  background-color: var(--color-bg-surface);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -260px;
+  z-index: 50;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+}
+.sidebarOpen {
+  left: 0;
+}
+@media (min-width: 1024px) {
+  .sidebar {
+    position: static;
+    left: 0;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--color-bg-overlay);
+  z-index: 45;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.overlayOpen {
+  opacity: 1;
+  visibility: visible;
+}
+@media (min-width: 1024px) {
+  .overlay {
+    display: none;
+  }
+}
+
+.logoContainer {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing-6);
+  border-bottom: 1px solid var(--color-border);
+  gap: var(--spacing-2);
+}
+.logoIcon {
+  color: var(--color-primary);
+}
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-text-base);
+  margin: 0;
+}
+
+.nav {
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+.sectionTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0 var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-md);
+  color: var(--color-text-base);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+.link:hover {
+  background-color: var(--color-bg-surface-hover);
+}
+.active {
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--color-primary);
+}
+.active:hover {
+  background-color: rgba(37, 99, 235, 0.15);
+}

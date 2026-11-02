@@ -1,0 +1,9 @@
+.statCard { display: flex; flex-direction: column; gap: var(--spacing-2); }
+.header { display: flex; align-items: center; justify-content: space-between; }
+.title { font-size: 0.875rem; font-weight: 500; color: var(--color-text-muted); margin: 0; }
+.icon { color: var(--color-text-muted); }
+.content { display: flex; align-items: baseline; gap: var(--spacing-3); margin-top: var(--spacing-2); }
+.value { font-size: 1.5rem; font-weight: 700; color: var(--color-text-base); }
+.trend { font-size: 0.875rem; font-weight: 500; }
+.positive { color: var(--color-success); }
+.negative { color: var(--color-danger); }

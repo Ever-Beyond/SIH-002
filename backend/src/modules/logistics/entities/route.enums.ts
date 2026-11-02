@@ -1,0 +1,7 @@
+export enum RouteStatus {
+  PROPOSED = 'PROPOSED',
+  ACCEPTED = 'ACCEPTED',
+  REJECTED = 'REJECTED',
+  ACTIVE = 'ACTIVE',
+  COMPLETED = 'COMPLETED'
+}

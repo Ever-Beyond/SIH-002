@@ -1,0 +1,20 @@
+.wrapper { display: flex; flex-direction: column; gap: var(--spacing-1); }
+.label { font-size: 0.875rem; font-weight: 500; color: var(--color-text-base); }
+.textarea {
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-base);
+  font-family: inherit;
+  font-size: 0.875rem;
+  min-height: 80px;
+  resize: vertical;
+  transition: all var(--transition-fast);
+}
+.textarea:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2); }
+.textarea:disabled { opacity: 0.6; cursor: not-allowed; background-color: var(--color-bg-base); }
+.hasError { border-color: var(--color-danger); }
+.hasError:focus { box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2); }
+.errorText { font-size: 0.75rem; color: var(--color-danger); margin: 0; }
+.helperText { font-size: 0.75rem; color: var(--color-text-muted); margin: 0; }

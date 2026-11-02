@@ -1,0 +1,101 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1rem 0;
+  margin: 0;
+  list-style: none;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  width: 2px;
+  background-color: var(--color-border);
+}
+
+.timelineItem {
+  display: flex;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+/* For the connector line not extending past the last item */
+.timelineItem:last-child::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  bottom: -1rem;
+  left: 15px;
+  width: 2px;
+  background-color: var(--color-surface); /* Hide the line below the last node by coloring it like the surface */
+}
+
+.node {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.nodeSuccess {
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.nodeWarning {
+  border-color: var(--color-warning);
+  color: var(--color-warning);
+}
+
+.nodeDanger {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.nodeNeutral {
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.content {
+  margin-left: 1rem;
+  flex: 1;
+  padding-top: 4px;
+}
+
+.title {
+  font-weight: 600;
+  color: var(--color-text-base);
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.description {
+  color: var(--color-text-muted);
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}

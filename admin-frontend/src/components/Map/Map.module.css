@@ -1,0 +1,70 @@
+.mapContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  z-index: 1; /* Keep map below modals */
+}
+
+/* Customizing Leaflet internals to match our theme */
+:global(.leaflet-container) {
+  background-color: var(--color-bg);
+  font-family: 'Inter', sans-serif;
+}
+
+:global(.leaflet-control-container) {
+  /* We will implement our own controls, so we can hide defaults if we want, but for now just let them be */
+}
+
+/* Custom divIcon overrides */
+:global(.custom-div-icon) {
+  background: transparent;
+  border: none;
+}
+
+.mapControls {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  pointer-events: none; /* Let clicks pass through the container */
+}
+
+.mapControls > * {
+  pointer-events: auto; /* Enable clicks on the actual controls */
+}
+
+.markerBase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--color-border);
+  position: relative;
+}
+
+.markerPulse::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  animation: pulse 1.5s infinite;
+  opacity: 0.5;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.5); opacity: 0; }
+}

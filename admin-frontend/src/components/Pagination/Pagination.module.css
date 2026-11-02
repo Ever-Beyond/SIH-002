@@ -1,0 +1,9 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+.info {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,162 @@
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+@media (min-width: 768px) {
+  .kpiGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .kpiGrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.kpiCard {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-4);
+  gap: var(--spacing-4);
+}
+
+.kpiIconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.kpiContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.kpiLabel {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.kpiValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-base);
+  line-height: 1.2;
+}
+
+/* Map Widget */
+.mapWidget {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mapPlaceholder {
+  flex: 1;
+  background-color: var(--color-bg-subtle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  color: var(--color-text-muted);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+/* List Widgets */
+.listWidget {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.widgetHeader {
+  padding: var(--spacing-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.widgetTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-base);
+  margin: 0;
+}
+
+.listContainer {
+  padding: var(--spacing-2) 0;
+  flex: 1;
+  overflow-y: auto;
+  max-height: 350px;
+}
+
+.emptyText {
+  padding: var(--spacing-4);
+  color: var(--color-text-muted);
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-3) var(--spacing-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.listItem:last-child {
+  border-bottom: none;
+}
+
+.itemMain {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.itemTitle {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-text-base);
+}
+
+.itemSub {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* AI Recommendations specific */
+.aiItem {
+  padding: var(--spacing-4);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.aiItem:last-child {
+  border-bottom: none;
+}
+
+.aiHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.aiActions {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-2);
+}

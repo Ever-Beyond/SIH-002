@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.tabList {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+  gap: var(--spacing-4);
+}
+.tab {
+  background: transparent;
+  border: none;
+  padding: var(--spacing-2) var(--spacing-1);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+.tab:hover {
+  color: var(--color-text-base);
+}
+.tab.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+.tabPanel {
+  padding: var(--spacing-4) 0;
+}
